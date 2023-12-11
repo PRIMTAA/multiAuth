@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  authdb:
+    image: mongo:latest
+    container_name: authdb-lvls
+    ports:
+      - "27017:27017"
+    volumes:
+      - auth_data:/data/db
+
+volumes:
+  auth_data:
+    
